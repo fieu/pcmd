@@ -13,6 +13,10 @@ Install pcmd either through the GitHub releases page or by building from source.
 
 Download the latest release from the GitHub [releases](https://github.com/fieu/pcmd/releases) page and extract the binary for your system.
 
+### Go Install:
+1. Run `go install github.com/fieu/pcmd@latest`
+2. The binary will be installed to `$GOPATH/bin` (e.g. `~/go/bin`)
+
 ### Building from Source:
 1. Clone the repository using `git clone https://github.com/fieu/pcmd.git`
 2. Build the binary using `go build`
