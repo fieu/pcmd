@@ -3,12 +3,13 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io"
 	"math/rand"
 	"os"
 	"os/exec"
 	"sync"
+
+	"gopkg.in/yaml.v2"
 )
 
 type Command struct {
