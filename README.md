@@ -6,25 +6,22 @@
 This program was made to simplify the process of running multiple long-running commands concurrently, while still being able to distinguish between the output of each command.
 
 ## Installation
-
 Install pcmd either through the GitHub releases page or by building from source.
 
-### GitHub Releases:
-
+### GitHub Releases
 Download the latest release from the GitHub [releases](https://github.com/fieu/pcmd/releases) page and extract the binary for your system.
 
-### Go Install:
+### Go Install
 1. Run `go install github.com/fieu/pcmd@latest`
 2. The binary will be installed to `$GOPATH/bin` (e.g. `~/go/bin`)
 
-### Building from Source:
+### Building from Source
 1. Clone the repository using `git clone https://github.com/fieu/pcmd.git`
 2. Build the binary using `go build`
 3. Move the binary to a directory in your `PATH` (e.g. `/usr/local/bin`)
 4. Make the binary executable using `chmod +x pcmd`
 
 ## Usage
-
 To use pcmd, create a YAML file (`pcmd.yml`) with the following structure:
 
 ```yaml
@@ -47,9 +44,7 @@ pcmd will read the YAML file, execute the commands concurrently, and display the
 Both stdout and stderr are displayed in the output. If a program exits, pcmd will display the exit code.
 
 ## Contributing
-
 Contributions are welcome! If you find any issues or have suggestions, please open an issue or a pull request.
 
 ## License
-
 pcmd is licensed under the MIT License. See [LICENSE](https://github.com/fieu/pcmd/blob/master/LICENSE) for more information.
