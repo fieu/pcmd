@@ -30,7 +30,7 @@ release: clean
 	GOARCH=arm GOOS=linux ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-Linux-arm $(ENTRYPOINT)
 	GOARCH=arm64 GOOS=linux ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-Linux-arm64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=freebsd ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-FreeBSD-x86_64 $(ENTRYPOINT)
-	GOARCH=amd64 GOOS=netbsd ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-Linux-x86_64 $(ENTRYPOINT)
+	GOARCH=amd64 GOOS=netbsd ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-NetBSD-x86_64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=openbsd ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-OpenBSD-x86_64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=dragonfly ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-DragonFly-x86_64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=plan9 ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-Plan9-x86_64 $(ENTRYPOINT)
