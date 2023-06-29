@@ -16,9 +16,14 @@ Download the latest release from the GitHub [releases](https://github.com/fieu/p
 2. The binary will be installed to `$GOPATH/bin` (e.g. `~/go/bin`)
 
 ### Building from Source
+
+#### Prerequisites
+- Go 1.16 or later
+- GNU Make
+
 1. Clone the repository using `git clone https://github.com/fieu/pcmd.git`
-2. Build the binary using `go build`
-3. Move the binary to a directory in your `PATH` (e.g. `/usr/local/bin`)
+2. Build the binary using `make build`
+3. Move the compiled binary to a directory in your `PATH` (e.g. `/usr/local/bin`)
 4. Make the binary executable using `chmod +x pcmd`
 
 ## Usage
