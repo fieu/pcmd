@@ -14,14 +14,14 @@ endif
 .PHONY: build
 ## build: build the application
 build: clean
-	@echo "\033[33mBuilding...\033[0m"
+	@echo -e "\033[33mBuilding...\033[0m"
 	${BUILD_PREFIX} -o $(PROGRAM_NAME) $(ENTRYPOINT)
-	@echo "\033[32mDone.\033[0m"
+	@echo -e "\033[32mDone.\033[0m"
 
 .PHONY: release
 ## release: build the application binaries for release
 release: clean
-	@echo "\033[33mBuilding...\033[0m"
+	@echo -e "\033[33mBuilding...\033[0m"
 	@mkdir dist
 	GOARCH=arm64 GOOS=darwin ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-macOS-arm64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=darwin ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-macOS-x86_64 $(ENTRYPOINT)
@@ -34,7 +34,7 @@ release: clean
 	GOARCH=amd64 GOOS=openbsd ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-OpenBSD-x86_64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=dragonfly ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-DragonFly-x86_64 $(ENTRYPOINT)
 	GOARCH=amd64 GOOS=plan9 ${BUILD_PREFIX} -o dist/$(BUILD_NAME)-Plan9-x86_64 $(ENTRYPOINT)
-	@echo "\033[32mDone.\033[0m"
+	@echo -e "\033[32mDone.\033[0m"
 
 .PHONY: run
 ## run: runs go run main.go
@@ -44,9 +44,9 @@ run:
 .PHONY: clean
 ## clean: cleans the binary
 clean:
-	@echo "\033[33mCleaning...\033[0m"
+	@echo -e "\033[33mCleaning...\033[0m"
 	@rm -rf dist/
-	@echo "\033[32mDone.\033[0m"
+	@echo -e "\033[32mDone.\033[0m"
 
 
 .PHONY: test
